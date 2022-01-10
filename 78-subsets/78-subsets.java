@@ -15,9 +15,9 @@ class Solution
 
             for(int i = index; i < nums.length; i++)
             {
-                arr.add(nums[i]);
+                arr.add(nums[i]);//left branch
                 BackTrack(list, nums, arr, i + 1);
-                arr.remove(arr.size() - 1);
+                arr.remove(arr.size() - 1);//right branch
             }
         }
 }
