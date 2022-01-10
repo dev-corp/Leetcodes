@@ -11,7 +11,7 @@ class Solution
     }
         public void BackTrack(List<List<Integer>> list, int[] nums, List<Integer> arr, int index)
         {
-            list.add(new ArrayList<>(arr));
+            list.add(new ArrayList<>(arr));//basecase condition
 
             for(int i = index; i < nums.length; i++)
             {
