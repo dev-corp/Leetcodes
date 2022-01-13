@@ -28,3 +28,21 @@ class Solution {
         return root1;
     }
 }
+
+/*
+public TreeNode MergeTrees(TreeNode root1, TreeNode root2) {
+       return MergeTwoTree( root1, root2);
+    }
+    
+    private TreeNode MergeTwoTree(TreeNode root1, TreeNode root2)
+    {
+        if(root1 == null && root2 == null) return null;
+        if(root1 == null || root2 == null) return root1 ?? root2;
+        
+        TreeNode newNode = new TreeNode(root1.val+root2.val);
+        newNode.left = MergeTwoTree(root1.left, root2.left);
+        newNode.right = MergeTwoTree(root1.right, root2.right);
+        
+        return newNode;
+    }
+*/
