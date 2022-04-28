@@ -1,20 +1,25 @@
-class Solution {
-public:
-    vector<int> findDisappearedNumbers(vector<int>& nums) 
+class Solution 
+{
+	public List<Integer> findDisappearedNumbers(int[] nums) 
     {
-        vector<int> ds;
-        int n=nums.size();
-        sort(nums.begin(), nums.end());
-        nums.erase( unique( nums.begin(), nums.end() ), nums.end() );
-        int j=0;
-        
-        for(int i=1;i<=n;i++)
+		List<Integer> ans = new ArrayList<>();
+		for(int i=0;i<nums.length;i++)
         {
-            if(i != nums[j])
-                ds.push_back(i);
-            else
-                j++;
-        }
-        return ds;
-    }
-};
+			int el = Math.abs(nums[i])-1;
+			if(nums[el]>0)
+            {
+				nums[el] = -nums[el];
+			}
+		}
+
+		for(int i=0;i<nums.length;i++)
+        {
+
+			if(nums[i]>0)
+            {
+				ans.add(i+1);
+			}
+		}
+		return ans;
+	}
+}
