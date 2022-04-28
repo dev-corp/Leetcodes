@@ -1,4 +1,5 @@
-class Solution {
+class Solution 
+{
 	public List<Integer> findDisappearedNumbers(int[] nums) 
     {
 		List<Integer> ans = new ArrayList<>();
