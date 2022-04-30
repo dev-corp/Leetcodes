@@ -13,8 +13,10 @@
  *     }
  * }
  */
-class Solution {
-    public int maxDepth(TreeNode root) {
+class Solution 
+{
+    public int maxDepth(TreeNode root) 
+    {
         if(root == null)
             return 0;
         int left_height = maxDepth(root.left);
