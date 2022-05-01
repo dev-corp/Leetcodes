@@ -28,7 +28,8 @@ class Solution
             {
                 stack.push(c);
 				
-            } else if (!stack.isEmpty())
+            } 
+            else if (!stack.isEmpty())
             {
                 stack.pop();
             }
