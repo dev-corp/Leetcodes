@@ -2,7 +2,7 @@ class Solution
 {
     public int maxSubArray(int[] nums) 
     {
-        //int max_sum = 0;
+        //Using Kadane's Algorithm
         int max_sum = nums[0];
         int curr_sum = 0;
         for(int i=0;i<nums.length;i++)
