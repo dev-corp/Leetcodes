@@ -1,7 +1,8 @@
 class Solution {
     public boolean checkRecord(String s) 
     {
-    		if (s.contains("LLL")) return false;
+    		if (s.contains("LLL")) 
+                return false;
     		
     		String str = s.replaceAll("A", "");
     		
