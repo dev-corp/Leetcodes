@@ -9,7 +9,8 @@ class Solution
         {
             sb.append(str.charAt(i));
             counter++;
-            if(counter%K == 0 && i!=0) sb.append("-");
+            if(counter%K == 0 && i!=0) 
+                sb.append("-");
         }
         return sb.reverse().toString();
     }
