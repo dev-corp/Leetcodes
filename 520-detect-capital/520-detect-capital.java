@@ -1,4 +1,5 @@
-class Solution {
+class Solution
+{
     public boolean detectCapitalUse(String str)
     {
         int n=str.length();
