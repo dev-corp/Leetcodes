@@ -18,7 +18,8 @@ public String removeDuplicates(String s, int k)
             stack.push(new Node(c,1));
         }
         //remove when num of dup == k
-        if(stack.peek().count==k) stack.pop();
+        if(stack.peek().count==k) 
+            stack.pop();
     }
     //build result
     StringBuilder sb = new StringBuilder();
