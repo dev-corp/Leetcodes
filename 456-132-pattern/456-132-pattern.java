@@ -15,3 +15,5 @@ class Solution
     return false;
     }
 }
+
+//https://leetcode.com/problems/132-pattern/discuss/94089/Java-solutions-from-O(n3)-to-O(n)-for-%22132%22-pattern-(updated-with-one-pass-slution)
