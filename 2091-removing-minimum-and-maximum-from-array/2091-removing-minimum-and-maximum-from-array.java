@@ -36,6 +36,5 @@ class Solution {
             int count1 = maxInd+1+(n-minInd);
             return Math.min(count,count1);
         }
-        
     }
 }
