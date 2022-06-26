@@ -24,9 +24,9 @@ class Solution {
         if (node == null) {
             return 0;
         }
-        int left_height = height(node.left, diameter);
-        int right_height = height(node.right, diameter);
-        diameter[0] = Math.max(diameter[0], left_height + right_height);
-        return 1 + Math.max(left_height, right_height);
+        int left_height = height(node.left, diameter);// Either the max diameter will be present in left part of tree
+        int right_height = height(node.right, diameter);//Or present in right part
+        diameter[0] = Math.max(diameter[0], left_height + right_height);//or combined
+        return 1 + Math.max(left_height, right_height); //returning the max diameter
     }
 }
