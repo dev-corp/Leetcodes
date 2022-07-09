@@ -11,16 +11,13 @@ class Solution
 		//check
             if(map.containsKey(target-nums[i]))
             {
-            
                     sol[0]=i;
                     sol[1]= map.get(target-nums[i]);
-                return sol;
-            
+                    return sol;
             } 
             //insert
             map.put(nums[i], i);
-        }
-           
+        }     
     return sol;
     }
 }
