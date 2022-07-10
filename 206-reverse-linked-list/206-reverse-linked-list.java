@@ -14,17 +14,28 @@ class Solution
      {
          //1 -> Make Dummy node null and connect to the 1 node of given list.
          //2 -> Point head to the next connecting node
-        ListNode prev = null;
-        ListNode curr = head;
-        ListNode nextOne = null;
+        ListNode newHead = null;
         
-        while(curr!=null)
+        while (head != null) 
         {
-            nextOne = curr.next;//head next to the dummy node
-            curr.next = prev;//Point to next node
-            prev = curr;
-            curr = nextOne;
+            ListNode next = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = next;
         }
-        return prev;
+        return newHead;
     }
 }
+
+//         ListNode prev = null;
+//         ListNode curr = head;
+//         ListNode nextOne = null;
+        
+//         while(curr!=null)
+//         {
+//             nextOne = curr.next;//head next to the dummy node
+//             curr.next = prev;//Point to next node
+//             prev = curr;
+//             curr = nextOne;
+//         }
+//         return prev;
