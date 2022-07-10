@@ -12,14 +12,16 @@ class Solution
 {
      public ListNode reverseList(ListNode head) 
      {
+         //1 -> Make Dummy node null and connect to the 1 node of given list.
+         //2 -> Point head to the next connecting node
         ListNode prev = null;
         ListNode curr = head;
         ListNode nextOne = null;
         
         while(curr!=null)
         {
-            nextOne = curr.next;
-            curr.next = prev;
+            nextOne = curr.next;//head next to the dummy node
+            curr.next = prev;//Point to next node
             prev = curr;
             curr = nextOne;
         }
