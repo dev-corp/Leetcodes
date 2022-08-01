@@ -1,5 +1,7 @@
-class Solution {
-    public int fib(int n) {
+class Solution 
+{
+    public int fib(int n) 
+    {
         return nthFib(n,new HashMap<Integer,Integer>());
     }
     public int nthFib(int n,HashMap<Integer,Integer> memo)
