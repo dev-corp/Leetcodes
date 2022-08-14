@@ -13,24 +13,52 @@
  *     }
  * }
  */
-class Solution {
-    public boolean isSameTree(TreeNode p, TreeNode q) {
-          
+
+class Solution
+{
+    public boolean isSameTree(TreeNode p, TreeNode q)
+    {
+        
         return isSame(p ,q);
         
     }
     
-    private boolean isSame(TreeNode root1, TreeNode root2){
-        
-        if(root1 == null && root2 == null){
+    private boolean isSame(TreeNode root1, TreeNode root2)
+    {
+        if(root1 == null && root2 == null)
+        {
             return true;
         }
         
-        if(root1 == null || root2 == null || root1.val != root2.val){
+        if(root1 == null || root2 == null || root1.val != root2.val)
+        {
             return false;
         }
         
         return isSame(root1.left, root2.left) && isSame(root1.right, root2.right);
         
     }
+    
 }
+
+// class Solution {
+//     public boolean isSameTree(TreeNode p, TreeNode q) {
+          
+//         return isSame(p ,q);
+        
+//     }
+    
+//     private boolean isSame(TreeNode root1, TreeNode root2){
+        
+//         if(root1 == null && root2 == null){
+//             return true;
+//         }
+        
+//         if(root1 == null || root2 == null || root1.val != root2.val){
+//             return false;
+//         }
+        
+//         return isSame(root1.left, root2.left) && isSame(root1.right, root2.right);
+        
+//     }
+// }
