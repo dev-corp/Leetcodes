@@ -16,17 +16,38 @@
 class Solution 
 {
     public int sumOfLeftLeaves(TreeNode root)
-    {
-    if(root == null) 
-        return 0;
-    int ans = 0;
-    if(root.left != null)
-    {
-        if(root.left.left == null && root.left.right == null) ans += root.left.val;
-        else ans += sumOfLeftLeaves(root.left);
+    {  
+        return sumOfLeavesInLeft(root, false);
     }
-    ans += sumOfLeftLeaves(root.right);
     
-    return ans;
+    private int sumOfLeavesInLeft(TreeNode root, boolean isLeft)
+    {
+        if(root == null)
+        {
+            return 0;
+        }
+        
+        if(root.left == null && root.right == null && isLeft == true)
+        {
+            return root.val;
+        }
+        return sumOfLeavesInLeft(root.left, true) + sumOfLeavesInLeft(root.right, false);  
     }
 }
+// class Solution 
+// {
+//     public int sumOfLeftLeaves(TreeNode root)
+//     {
+//     if(root == null) 
+//         return 0;
+//     int ans = 0;
+//     if(root.left != null)
+//     {
+//         if(root.left.left == null && root.left.right == null) ans += root.left.val;
+//         else ans += sumOfLeftLeaves(root.left);
+//     }
+//     ans += sumOfLeftLeaves(root.right);
+    
+//     return ans;
+//     }
+// }
