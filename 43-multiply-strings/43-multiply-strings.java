@@ -1,4 +1,4 @@
-class Solution 
+class Solution
 {
 	public String multiply(String num1, String num2) 
     {
@@ -29,3 +29,13 @@ class Solution
 		return sb.toString();
 	}
 }
+
+// genius thought process
+// This logic has been taken straight from vedic maths
+// ex. 12*90 will be done like this
+
+// (0*2)=0
+// (1*0)+(2*9)+(1*9)=18(carry=1)=>8
+// 1*9(+carry)=10
+
+// i.e 1080
