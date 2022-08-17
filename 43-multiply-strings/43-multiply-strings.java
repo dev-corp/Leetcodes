@@ -11,7 +11,7 @@ class Solution
         {
 			for (int j = 0; j < num2.length(); j++) 
             {
-				ans[i + j] += (num1.charAt(i) - '0') * (num2.charAt(j) - '0');
+			ans[i + j] += (num1.charAt(i) - '0') * (num2.charAt(j) - '0');//for string to int conversion multiplying with 0
 			}
 		}
 
