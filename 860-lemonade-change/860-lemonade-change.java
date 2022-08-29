@@ -8,17 +8,21 @@ class Solution
         {
             if (i == 5) 
                 five++;
+            
             else if (i == 10) 
             {
                 five--; 
                 ten++;
             }
+            
             else if (ten > 0)
             {
                 ten--;
                 five--;
             }
+            
             else five -= 3;
+            
             if (five < 0)
                 return false;
         }
