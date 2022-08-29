@@ -9,12 +9,14 @@ class Solution
             if (i == 5) 
                 five++;
             
+            // for user give 10
             else if (i == 10) 
             {
                 five--; 
                 ten++;
             }
             
+            // for user gives 20
             else if (ten > 0)
             {
                 ten--;
