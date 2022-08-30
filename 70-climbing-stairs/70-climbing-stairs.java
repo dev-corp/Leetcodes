@@ -20,7 +20,9 @@ class Solution
         
         int oneStep = totalWays(currentStair+1,targetStair,memo);
         int twoStep = totalWays(currentStair+2,targetStair,memo);
+        
         memo.put(currentKey,oneStep+twoStep);
+        
         return oneStep + twoStep;
     }
 }
