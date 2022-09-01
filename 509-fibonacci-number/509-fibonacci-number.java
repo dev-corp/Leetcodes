@@ -9,11 +9,15 @@ class Solution
         if(n<=1)
             return n;
         
-        if(memo.containsKey(n))
-            return memo.get(n);
+        int currentKey = n;
+        if(memo.containsKey(currentKey))
+            return memo.get(currentKey);
         
-        memo.put(n,nthFib(n-1,memo) + nthFib(n-2,memo));
+        int a = nthFib(n-1, memo);
+        int b = nthFib(n-2, memo);
         
-        return memo.get(n);
+        memo.put(currentKey, a+b);
+        
+        return a+b;
     }
 }
