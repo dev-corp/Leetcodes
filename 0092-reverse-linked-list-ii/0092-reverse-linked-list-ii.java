@@ -37,4 +37,4 @@ class Solution {
 
     }
 }
-// To clarify, all you're doing is inserting then between pre and pre.next. You keep moving then forward by 1 until you reach the difference, m - n, & you keep making start.next point to then.next to insure it's always pointing to the tail part of the list. Pretty simple lol.
+// To clarify, all we're doing is inserting then between pre and pre.next. we keep moving then forward by 1 until we reach the difference, m - n, & we have to keep making start.next point to then.next to insure it's always pointing to the tail part of the list.
