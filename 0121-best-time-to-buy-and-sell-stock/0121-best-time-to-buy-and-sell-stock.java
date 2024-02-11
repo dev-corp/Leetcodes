@@ -1,24 +1,28 @@
 class Solution {
     public int maxProfit(int[] prices) {
-        return solve(0,prices,1,1,new HashMap<String,Integer>());
+        int n=prices.length;
+        return solve(0,prices,n,1,1,new HashMap<>());
     }
-    private int solve(int ci,int[] prices,int canBuy,int transCount,HashMap<String,Integer> memo){
-        if(ci>=prices.length||transCount==0){
+    private int solve(int ci,int[] prices,int n,int canBuy,int transCount,HashMap<String,Integer> memo){
+        if(transCount==0){
             return 0;
         }
-        String currentKey = ci+"_"+canBuy+"_"+transCount;
-        if(memo.containsKey(currentKey)){
-            return memo.get(currentKey);
+        if(ci>=prices.length){
+            return 0;
         }
-        int idle = solve(ci+1,prices,canBuy,transCount,memo);
+        String currentkey=ci+"_"+canBuy+"_"+transCount;
+        if(memo.containsKey(currentkey)){
+            return memo.get(currentkey);
+        }
+        int idle = solve(ci+1,prices,n,canBuy,transCount,memo);
+        int sell=0;
         if(canBuy==1){
-            int buy = -prices[ci]+solve(ci+1,prices,1-canBuy,transCount,memo);
-            memo.put(currentKey,Math.max(idle,buy));
+            int buy = -prices[ci]+solve(ci+1,prices,n,0,transCount,memo);
+            memo.put(currentkey,Math.max(idle,buy));
             return Math.max(idle,buy);
-        }
-        else {
-            int sell = prices[ci]+solve(ci+1,prices,canBuy,0,memo);
-            memo.put(currentKey,Math.max(idle,sell));
+        } else {
+            sell = prices[ci]+solve(ci+1,prices,n,1,0,memo);
+            memo.put(currentkey,Math.max(idle,sell));
             return Math.max(idle,sell);
         }
     }
